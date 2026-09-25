@@ -1,4 +1,4 @@
-public class Conteudo {
+public abstract class Conteudo {
 
     private String titulo;
     private int duracao;
@@ -24,6 +24,19 @@ public class Conteudo {
         System.out.println("Reproduzindo: " + titulo);
         reproducao++; //reproducao = reproducao + 1
     }
+
+    public void reproduzir(int quantidade){
+        if(quantidade <= 0){
+            System.out.println("Quantidade inválida");
+            return;
+        }
+
+        for( int i=0; i < quantidade; i++){
+            reproduzir();
+        }
+    }
+
+    public abstract void exibirDetalhes();
 
     public String getTitulo(){
         return titulo;

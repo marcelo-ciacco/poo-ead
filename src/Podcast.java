@@ -20,4 +20,8 @@ public class Podcast extends Conteudo{
         return apresentador;
     }
 
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Exibindo detalhes de podcast");
+    }
 }

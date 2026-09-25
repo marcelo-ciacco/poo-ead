@@ -8,8 +8,6 @@ void main() {
 
     Podcast podcast1 = new Podcast("Palestra POO", "prof. Marcelo", 1000);
 
-    Conteudo conteudo1 = new Conteudo("Conteudo de Audio", 300);
-
     MusicaoAoVivo musica3 = new MusicaoAoVivo("Tempo Perdido", "Legião Urbana Couver", 280);
     musica3.setLocalDoShow("São Paulo");
 
@@ -23,7 +21,7 @@ void main() {
    // favoritas.reproduzirMusica(1);
 
     favoritas.adicionarMusica(musica3);
-    favoritas.exibirMusicas();
+    favoritas.exibirConteudos();
 
     //musica1.setTitulo(" ");
 

@@ -4,7 +4,7 @@ import java.util.List;
 public class Playlist {
 
     private String nome;
-    private List<Musica> musicas;
+    private List<Conteudo> conteudos;
 
     public Playlist(String nome){
         if(nome == null || nome.isBlank()){
@@ -12,7 +12,7 @@ public class Playlist {
             return;
         }
         this.nome = nome;
-        this.musicas = new ArrayList<>();
+        this.conteudos = new ArrayList<>();
     }
 
     public String getNome(){
@@ -26,21 +26,21 @@ public class Playlist {
             return;
         }
 
-        musicas.add(musica);
+        conteudos.add(musica);
     }
 
-    public void exibirMusicas(){
+    public void exibirConteudos(){
         System.out.println("Playlist: " + nome);
 
-        for(Musica musica : musicas){
-            System.out.println(musica.getTitulo() + " - " + musica.getArtista());
+        for(Conteudo conteudo : conteudos){
+            System.out.println(conteudo.getTitulo() + " - ");
         }
     }
 
-    public void reproduzirMusica(int indice){
+    public void reproduzirConteudo(int indice){
 
-        Musica musica = musicas.get(indice);
-        musica.reproduzir();
+        Conteudo conteudo = conteudos.get(indice);
+        conteudo.reproduzir();
 
     }
 

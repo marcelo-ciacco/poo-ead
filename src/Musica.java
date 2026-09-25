@@ -53,4 +53,9 @@ public class Musica extends Conteudo {
         System.out.println("=====================================");
     }
 
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Exibindo detalhes de musica");
+    }
+
 }
