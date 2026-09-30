@@ -11,17 +11,28 @@ void main() {
     MusicaoAoVivo musica3 = new MusicaoAoVivo("Tempo Perdido", "Legião Urbana Couver", 280);
     musica3.setLocalDoShow("São Paulo");
 
-    Playlist favoritas = new Playlist("Favoritas");
-    Playlist play2 = new Playlist("   ");
+    AnuncioAudio anuncio = new AnuncioAudio("Lojinha do Fulano em promoção no fim de semana");
 
-    favoritas.adicionarMusica(musica1);
-    favoritas.adicionarMusica(musica2);
-    favoritas.adicionarMusica(new Musica("Musica x", "Artista y", 233));
+    Playlist tarde = new Playlist("Horario da Tarde");
+    tarde.adicionarItem(musica1);
+    tarde.adicionarItem(musica2);
+    tarde.adicionarItem(anuncio);
+    tarde.adicionarItem(podcast1);
+    tarde.adicionarItem(anuncio);
+
+    tarde.reproduzirLista();
+
+    //Playlist favoritas = new Playlist("Favoritas");
+    //Playlist play2 = new Playlist("   ");
+
+  //  favoritas.adicionarMusica(musica1);
+ //   favoritas.adicionarMusica(musica2);
+//    favoritas.adicionarMusica(new Musica("Musica x", "Artista y", 233));
 
    // favoritas.reproduzirMusica(1);
 
-    favoritas.adicionarMusica(musica3);
-    favoritas.exibirConteudos();
+ //   favoritas.adicionarMusica(musica3);
+  //  favoritas.exibirConteudos();
 
     //musica1.setTitulo(" ");
 
@@ -36,5 +47,16 @@ void main() {
 
  //   musica2.exibirInformacoes();
   //  musica3.exibirInformacoes();
+
+  /*  Conta c1 = new ContaCorrente();
+    Conta c2 = new ContaPoupanca();
+
+    List<Conta> contasDouglas = new ArrayList<>();
+
+    contasDouglas.add(c1);
+    contasDouglas.add(c2);
+
+    System.out.println(contasDouglas.get(0).exibirDados());
+   */
 
 }

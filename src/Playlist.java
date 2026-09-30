@@ -4,7 +4,7 @@ import java.util.List;
 public class Playlist {
 
     private String nome;
-    private List<Conteudo> conteudos;
+    private List<Reproduzivel> itens;
 
     public Playlist(String nome){
         if(nome == null || nome.isBlank()){
@@ -12,35 +12,59 @@ public class Playlist {
             return;
         }
         this.nome = nome;
-        this.conteudos = new ArrayList<>();
+        this.itens = new ArrayList<>();
     }
 
     public String getNome(){
         return nome;
     }
 
-    public void adicionarMusica(Musica musica){
+    public void adicionarItem(Reproduzivel reproduzivel){
+        itens.add(reproduzivel);
+    }
+
+    /*public void adicionarMusica(Musica musica){
 
         if(musica == null){
             System.out.println("Música Inválida!");
             return;
         }
 
-        conteudos.add(musica);
-    }
+        itens.add(musica);
+    }*/
 
-    public void exibirConteudos(){
+   /* public void exibirConteudos(){
         System.out.println("Playlist: " + nome);
 
-        for(Conteudo conteudo : conteudos){
-            System.out.println(conteudo.getTitulo() + " - ");
+        for(Reproduzivel reproduzivel : itens){
+            //System.out.println(conteudo.getTitulo() + " - ");
         }
-    }
+    }*/
 
-    public void reproduzirConteudo(int indice){
+   /* public void reproduzirConteudo(int indice){
 
         Conteudo conteudo = conteudos.get(indice);
         conteudo.reproduzir();
+
+    }*/
+
+    public void reproduzirLista(){
+
+        System.out.println("Playlist: " + nome);
+
+        for(Reproduzivel item : itens){
+
+          /*  if(item instanceof AnuncioAudio anuncio){
+                System.out.println("ANUNCIANDO O LOJISTA: " + anuncio.getMensagem());
+            }*/
+
+            item.reproduzir();
+
+           /* if(item instanceof Conteudo conteudo){
+                System.out.println("Quantidade já reproduzida" + conteudo.getReproducao());
+            }*/
+
+        }
 
     }
 

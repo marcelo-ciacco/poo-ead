@@ -1,4 +1,4 @@
-public abstract class Conteudo {
+public abstract class Conteudo implements Reproduzivel {
 
     private String titulo;
     private int duracao;
@@ -20,6 +20,7 @@ public abstract class Conteudo {
         this.reproducao = 0;
     }
 
+    @Override
     public void reproduzir(){
         System.out.println("Reproduzindo: " + titulo);
         reproducao++; //reproducao = reproducao + 1
